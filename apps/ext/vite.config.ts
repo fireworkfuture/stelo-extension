@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         inspector: resolve(__dirname, "src/stelo.html"),
         appCode: resolve(__dirname, "src/RedesignAppMount.tsx"),
+        index: resolve(__dirname, "src/index.html"),
       },
     },
   },
