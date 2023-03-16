@@ -9,8 +9,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        inspector: resolve(__dirname, "src/stelo.html"),
-        appCode: resolve(__dirname, "src/RedesignAppMount.tsx"),
+        transaction: resolve(__dirname, "src/transaction.html"),
         index: resolve(__dirname, "src/index.html"),
       },
     },

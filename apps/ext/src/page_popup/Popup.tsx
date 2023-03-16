@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./SteloHome";
-import "./index.css";
+import App from "./PopupApp";
+import "../default.css";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -59,7 +59,7 @@ export default class NotificationManager {
 
     // create new notification popup
     const popupWindow = await this.platform.openWindow({
-      url: `src/stelo.html?rpcRequestId=${rpcRequestId}`,
+      url: `src/transaction.html?rpcRequestId=${rpcRequestId}`,
       type: "popup",
       width: NOTIFICATION_WIDTH,
       height: NOTIFICATION_HEIGHT,

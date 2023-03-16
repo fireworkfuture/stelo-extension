@@ -1,12 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Stelo Test",
+  "name": "Binenet Test",
   "version": "1.0.0",
+  "description": "Binenet Web3 Extension",
   "action": { "default_popup": "src/popup.html" },
   "background": {
     "service_worker": "./src/worker/index.ts"
   },
-  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "icons": { "16": "icon.png", "48": "icon.png", "128": "icon.png" },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
@@ -25,5 +26,5 @@
       "resources": ["src/static/*.png"]
     }
   ],
-  "permissions": ["storage"]
+  "permissions": ["storage", "management"]
 }

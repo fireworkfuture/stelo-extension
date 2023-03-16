@@ -1,10 +1,10 @@
 import { useCallback } from "react";
 import { App } from "uiv2";
 import { ErrorLayout } from "uiv2/views/ErrorView/ErrorView";
-import { useAsync } from "./hooks/useAsync";
-import { popRequestForId } from "./shared/storage";
-import { sendDecision } from "./shared/messages";
-import { getDeviceId } from "./shared/deviceId";
+import { useAsync } from "../hooks/useAsync";
+import { popRequestForId } from "../shared/storage";
+import { sendDecision } from "../shared/messages";
+import { getDeviceId } from "../shared/deviceId";
 import { themeVars } from "uiv2/css/themeContract.css";
 import { ErrorBoundary } from "uiv2/base/ErrorBoundary";
 
@@ -18,7 +18,7 @@ try {
   rpcRequestId = "missing-rpc-request-id";
 }
 
-export const RedesignApp = () => {
+export const TransactionApp = () => {
   const callRequest = useCallback(
     () => popRequestForId(rpcRequestId),
     [rpcRequestId]

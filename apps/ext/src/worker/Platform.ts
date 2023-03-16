@@ -83,4 +83,37 @@ export default class Platform {
       });
     });
   }
+  static openTab(options: browser.Tabs.CreateCreatePropertiesType) {
+    return new Promise((resolve, reject) => {
+      browser.tabs.create(options).then((newTab) => {
+        const error = checkForError();
+        if (error) {
+          return reject(error);
+        }
+        return resolve(newTab);
+      });
+    });
+  }
+  static getAllExtensions(): Promise<browser.Management.ExtensionInfo[]> {
+    return new Promise((resolve, reject) => {
+      browser.management.getAll().then((list) => {
+        const error = checkForError();
+        if (error) {
+          return reject(error);
+        }
+        return resolve(list);
+      });
+    });
+  }
+  static setEnable(id: string, enabled: boolean): Promise<void> {
+    return new Promise((resolve, reject) => {
+      browser.management.setEnabled(id, enabled).then(() => {
+        const error = checkForError();
+        if (error) {
+          return reject(error);
+        }
+        return resolve();
+      });
+    });
+  }
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./PopupApp";
-import "./index.css";
+import { TransactionApp } from "./TransactionApp";
+import "../default.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TransactionApp />
   </React.StrictMode>,
   document.getElementById("root")
 );
